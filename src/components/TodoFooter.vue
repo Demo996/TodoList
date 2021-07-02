@@ -18,13 +18,16 @@
         },
         methods: {},
         computed: {
+            //计算已勾选事项数量
             completeSize() {
                 return this.todo.reduce((preTotal, item) => preTotal + (item.complete ? 1 : 0), 0)
             },
+            //是否全选
             isAllSelected: {
                 get() {
                     return this.todo.length === this.completeSize && this.todo.length
                 },
+                //点击全选则所有事项都被勾选的事件
                 set(check) {
                     this.selectAllItems(check)
                 }

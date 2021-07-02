@@ -18,6 +18,7 @@
             }
         },
         methods: {
+            //鼠标悬挂背景变暗，显示删除按钮
             enterShow(isEnter) {
                 if (isEnter) {
                     this.bgcl = "#CCC"
@@ -27,6 +28,7 @@
                     this.isEnter = false
                 }
             },
+            //删除当前行
             deleteRow() {
                 const {
                     index,

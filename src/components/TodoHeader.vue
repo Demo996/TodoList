@@ -14,15 +14,17 @@
             }
         },
         methods: {
+            //添加新事项
             addItem() {
                 const {
                     title,
                     todo
                 } = this
                 let obj = {
-                    title,
-                    complete: false
-                }
+                        title,
+                        complete: false
+                    }
+                    //数组头部插入元素
                 todo.unshift(obj)
                 this.title = ""
             }
